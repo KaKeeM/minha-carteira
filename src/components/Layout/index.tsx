@@ -8,8 +8,8 @@ import Aside from "../Aside";
 const Layout: React.FC  = () => {
     return (
         <Grid>
-            <Aside/>
             <MainHeader/>
+            <Aside/>
             <Content/>
         </Grid>
     );
