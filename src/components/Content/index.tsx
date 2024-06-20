@@ -1,14 +1,13 @@
 import React from "react";
-import { Container} from './styles'
+import { Container } from './styles';
 
-//FC é functional componente : => componente funcional
-const Content: React.FC  = () => {
+// FC é functional component (componente funcional)
+const Content: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
     return (
         <Container>
-            <h1>Content</h1>
+            {children}
         </Container>
-    )
+    );
 }
 
 export default Content;
-

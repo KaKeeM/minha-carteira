@@ -42,7 +42,7 @@ export const MenuItemLink = styled.a`
     &:hover{
         opacity: .7;
     }
-    >svg {
+    > svg {
         font-size:18px;
     }
 `;
