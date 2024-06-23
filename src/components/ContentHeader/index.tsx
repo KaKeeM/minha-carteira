@@ -1,11 +1,17 @@
 import React from "react";
-import {Container} from './styles';
+import {Container, Title, Controllers} from './styles';
 
 //FC é functional componente : => componente funcional
 const ContentHeader: React.FC  = () => {
     return (
         <Container>
-            <h1> ContentHeader</h1>
+            <Title>
+                <h1> Título </h1>
+            </Title>
+            <Controllers>
+                <button type="button">Botão A</button>
+                <button type="button">Botão b</button>
+            </Controllers>
         </Container>
     )
 }
