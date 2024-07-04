@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    grid-area: CT;
-    color: ${props => props.theme.colors.white};
-    background-color: ${props => props.theme.colors.tertiary};
-    padding: 25px;
+    > select {
+        padding: 7px 10px;
+        border-radius: 5px;
+
+        margin-left: 7px;
+
+
+    }
 `;

@@ -1,11 +1,27 @@
 import React from "react";
 import { Container } from './styles';
 
+interface ISelectInputProps {
+    options: {
+        value: string | number;
+        label: string | number;
+    }[];
+}
+
+
 // FC é functional component (componente funcional)
-const SelectInput: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+const SelectInput: React.FC<ISelectInputProps> = ({ options }) => {
     return (
         <Container>
-            {children}
+            <select>
+                {
+                    options.map(option => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))
+                }
+            </select>
         </Container>
     );
 }
