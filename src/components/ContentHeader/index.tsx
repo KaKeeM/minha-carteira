@@ -1,39 +1,27 @@
 import React from "react";
-import {Container, TitleContainer, Controllers} from './styles';
-import SelectInput from "../SelectInput";
-
-//cria obeto de interação 
-interface IconctentHeaderProps{
-        title: string;
-        lineColor: string;
-        controllers: React.ReactNode;
-    }
+import { Container, TitleContainer, Controllers } from './styles';
 
 
-//FC é functional componente : => componente funcional
-const ContentHeader: React.FC<IconctentHeaderProps> = () => {
 
-    //continuar aqui.... 
+interface IContentHeaderProps {
+    title: string;
+    lineColor: string;
+    children?: React.ReactNode;
+}
 
-    const options = [
-        {value: 'Julia', label: 'Julia'},
-        {value: 'Maria', label: 'Maria'},
-        {value: 'ANa', label: 'ana'}
-    ]
+const ContentHeader: React.FC<IContentHeaderProps> = ({ title, lineColor, children }) => {
+
 
     return (
         <Container>
-            <TitleContainer>
-                <h1> Título </h1>
+            <TitleContainer lineColor={lineColor}>
+                <h1>{title}</h1>
             </TitleContainer>
             <Controllers>
-                <SelectInput options={options}/>
-                <SelectInput options={options}/>
-                <SelectInput options={options}/>
+                {children}
             </Controllers>
         </Container>
-    )
+    );
 }
 
 export default ContentHeader;
-
