@@ -3,18 +3,17 @@ import { Container, Tag } from "./styled";
 
 
 interface IHistoryFinanceCardProps {
-    cardColor: string;
     tagColor: string;
     title: string;
     subtitle: String;
     amount: string;
 }
 
-const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({ title, cardColor, tagColor, subtitle, amount }) => {
+const HistoryFinanceCard: React.FC<IHistoryFinanceCardProps> = ({ title, tagColor, subtitle, amount }) => {
 
 
     return (
-        <Container color={cardColor}>
+        <Container>
             <Tag color={tagColor}/>
             <div>
                 <span>{title}</span>
